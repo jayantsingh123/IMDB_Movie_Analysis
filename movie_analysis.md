@@ -241,6 +241,7 @@ Refer to this link for more details, (https://en.wikipedia.org/wiki/Aspect_ratio
 ### Distribution of Movie Color
 Since ```color``` is a categorical variable, bar chart is a suitable choice to represent its distribution. 
 <img src="movie_analysis_files/figure-html/Distribution of Movie Color-1.png" style="display: block; margin: auto;" />
+
 As expected, ```color``` movies dominate the distribution, with the ```Black and White``` movies account for a small portion. Few movies are missing information for the ```color``` variable.
 
 ### Duration of the movie
@@ -301,12 +302,14 @@ This is an interesting feature in the dataset. It gives an idea of the popularit
 As expected, **English** is the dominating language, followed by **French** and **Hindi**. This information will be used later to study the language trend across countries, time, etc. Aside, we observe the 10 most popular  ```languages```.
 
 <img src="movie_analysis_files/figure-html/Top 10 Popular Languages-1.png" style="display: block; margin: auto;" />
+
 The number of ```English``` movies heavily outnumber other languages.
 
 ### Distribution of Country
 Next, we look at the count of movies in each ```country```. Similar to language, it is a categorical variable.
 <img src="movie_analysis_files/figure-html/Distribution of Country-1.png" style="display: block; margin: auto;" />
-In this dataset, highest number of movies are produced in ```U.S.A```, close to 3500. In the bivariate anlaysis, we will look at different characteristics, including ```language```,```content_rating```, etc. in relation to countries. Lets look at the top 10 countries with highest number of movies.
+
+In this dataset, highest number of movies are produced in ```U.S.A```, close to 3500. In the bivariate anlaysis, we will look at different characteristics, including ```language```,```content_rating```, etc. in relation to countries. Lets look at the top 10 countries with respect to number of movies.
 
 
 ```
@@ -348,6 +351,7 @@ Next, we plot the data on the world map.
 <img src="movie_analysis_files/figure-html/unnamed-chunk-18-1.png" style="display: block; margin: auto;" />
 
 ### Distribution of Budget
+
 It will be interesting to observe the budget distribution. We can observe the count of movies having sufficiently high budget. Before plottng it, we will convert the budget to millions.
 
 
@@ -355,7 +359,7 @@ It will be interesting to observe the budget distribution. We can observe the co
 
 <img src="movie_analysis_files/figure-html/Distribution of Budget-1.png" style="display: block; margin: auto;" />
 
-The distribution is right skewed, as expected. Most of the movies have a low budget. Out of curiosity, we will find the movie with highest budget.
+The distribution is right skewed, as expected. Most of the movies have a low budget. Out of curiosity, we identify the movie with highest budget.
 
 
 ```
@@ -407,6 +411,7 @@ Next, we observe the distribution for number of votes a movie has received. Bein
 
 
 <img src="movie_analysis_files/figure-html/Distribution of User votes-1.png" style="display: block; margin: auto;" />
+
 Very few movies have number of votes larger than 1 million, indicating a right skewed distribution. As a side blurb, we identify the movie with the highest number of votes.
 
 
@@ -418,6 +423,7 @@ Very few movies have number of votes larger than 1 million, indicating a right s
 Approximately, the movie ```The Shawshank Rdemption``` gathered 1689.764 votes.
 
 ### Distribution of Movie Facebook Likes
+
 Apart from number of user votes, number of facebook likes can also help to assess the popularity of the movie. Checking its summary, we observe significant right skewness.
 
 ```
@@ -467,9 +473,8 @@ Because of too much data, the figure is not so informative. On a side note, we l
 The list is led by the icon ```Steven Spielberg``` followed by other legends including ```Client Eastwood``` and ```Woody Allen```. In the multivariate analysis section, we will look at their distribution as per language. 
 
 ### Distribution of Facebook likes received by Director
+
 Next, we judge the popularity of the movie's director. We will look at the histogram for the variable, ```director_facebook_likes```.
-
-
 
 ```
 ##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
@@ -501,6 +506,7 @@ After taking log(base10), as expected the right skewed data looks approximately 
 The great icon, ```Steven Spielberg``` does not appear in the top 10 list, since most of his notable movies were old, and facebook started in 2006.
 
 ### Distribution of First Actor
+
 There are 2035 distinct values for first actor in the data, therefore bar graph will be almost not legible. So, it will be more useful to look at 10 actors with highest movie count.
 
 
@@ -539,6 +545,7 @@ As seen, ```Robert De Niro``` has  starred as the leading actor in highest numbe
 ```
 
 ### Distribution of Leading Actor Facebook Likes
+
 To begin with, we will look at the summary.
 
 
@@ -552,6 +559,7 @@ As seen for the variable, ```director_facebook_likes```, the distribution is rig
 
 The distribution is bimodal, and is also right skewed. Let us look at the ```log``` of the continuous variable, ```actor_1_facebook_likes```. 
 <img src="movie_analysis_files/figure-html/Distribution of log of Facebook Likes for Leading Actor-1.png" style="display: block; margin: auto;" />
+
 As expected, the distribution of ```log()``` data is relatively normal, and bimodal. For example, there are 1271 observations in the data where ```actor_1_facebook_likes``` lies between ```3-0.125``` and ```3+0.125```. It should be noted that  this interval corresponds to the interval ```10^c(2.875,3.125)```. Next, we will identify the leading actor with highest number of facebook likes.
 
 
@@ -570,6 +578,7 @@ As expected, the distribution of ```log()``` data is relatively normal, and bimo
 ```
 
 ### Distribution of Second Actor
+
 Similar to the leading actor, we will identify the 10 second actors with highest movie count.
 
 
@@ -608,6 +617,7 @@ Checking the mean and median, we conclude that it is right skewed. Lets check wi
 Similar to popularity of leading actor, this distribution is bimodal as well as right skewed.
 
 ### Distribution of Actor 3 Name
+
 Similar to leading actor, we will identify the most popular ```third actors```.
 
 
@@ -637,6 +647,7 @@ We observe the summary of the variable, ```actor_3_facebook_likes```.
 ##     0.0   132.0   367.5   638.6   636.0 23000.0      18
 ```
 Since mean exceeds the median, it is right skewed distribution, as seen in the following figure.
+
 <img src="movie_analysis_files/figure-html/Distribution of Actor_3_facebook_likes-1.png" style="display: block; margin: auto;" />
 
 
@@ -654,13 +665,16 @@ Next, we represent this data using bar graph. First, transform the ```genre``` t
 As expected, ```Drama``` is the most popular genre, followed by ```Comedy``` and ```Thriller+Drama```. It should be noted that there are 282 movies, which get classified as both ```Thriller``` and ```Drama```. -->
 
 ### Recap
+
 Univariate analysis was conducted in this section to get some overview of the variables. The numeric variables, ```budget``` and ```income``` as expected are right skewed. Since very few movies are costly or generate huge revenue, right skewness is expected. At the same time, recently there has been a surge in number of movies; the distribution of ```year``` is left skewed. On the other hand, the number of facebook likes for director and actors is right skewed, which indicates very few popular actors on facebook.
 
 ## Bivariate Analysis
+
 Earlier, we performed univariate analysis of the data. Now we plan to observe two variables at a time, i.e. Bivariate Analysis.
 
 
 ### Income Generated Across Different Countries
+
 In this section, we analyze the distribution of income generated across diferent countries. Since ```country``` is a categorical variable, ```gross_income``` is numeric, therefore boxplot is a suitable choice. In the univariate section, we saw that top 10 countries with highest number of movies are ```USA```,```UK```,```France```,```Canada```,```Germany```,```Australia```,```India```,```Spain```,```China```, and ```Japan```.First, we will filter the data for these countries. Next, we observe the boxplot.
 
 
@@ -680,11 +694,14 @@ Looking at the boxplot, we see significant outliers for countries, ```China``` a
 ## 3 The Secret Life of Pets                   324.  Japan  
 ## 4 Trainwreck                                110.  Japan
 ```
-In ```China``` the two highest revenue generating movies are Mission:Impossible-Rogue Nation and The Last Emperor. Similarly for ```Japan```, top 2 movies are The Secret Life of Pets and Trainwreck.
+In ```China``` the two highest revenue generating movies are Mission:Impossible-Rogue Nation and The Last Emperor. Similarly for ```Japan```, top 2 movies are **The Secret Life of Pets** and **Trainwreck**.
 
 ### Budget Distribution Across Countries
-Now we analyze the distribution of movie budget for each country. Since ```country``` is a categorical variable, and ```Budget_millions``` is numeric, we will use the boxplot. 
+
+Now we analyze the distribution of movie budget for each country. Since ```country``` is a categorical variable, and ```Budget_millions``` is numeric, we will use the boxplot.
+
 <img src="movie_analysis_files/figure-html/Income Distribution Across Countries-1.png" style="display: block; margin: auto;" />
+
 From the boxplot, it can be observed that for countries like ```China```,```India```, ```Japan```, and ```Spain``` the outliers are very significant. Let us find the highest budget movie for these countries.
 
 
@@ -709,12 +726,8 @@ The leading actor in this movie is ```Shahrukh Khan```, a Bollywood icon. As a s
 We observe that ```Shahrukh``` and ```Katrina``` lead the chart way ahead of other leading actors. Next, it will be interesting to see language distribution across top 10 countries.
 
 ### Language Distribution Across Countries
+
 We need to know the popularity of language in a given country. The focus will be on the top 10 countries, with highest number of movies. We plan to do the grouping on two variables; ```country``` and ```language```.
-
-
-
-Next, we get a bar chart to get the number of movies in a particular language, faceted  by country.
-
 
 ```
 ##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
@@ -723,9 +736,11 @@ Next, we get a bar chart to get the number of movies in a particular language, f
 The count variable is heavily skewed with 75 percent of values being less than 12 but maximum value is 3600. We found that in ```US``` the number of movies made in English is 3600. If we ignore that record, and look at the new plot.
 
 <img src="movie_analysis_files/figure-html/unnamed-chunk-35-1.png" style="display: block; margin: auto;" />
+
 Apart from ```India``` and ```China```, for every country, most of the movies are made in English. As expected, highest number of movies made in ```India``` are in ```Hindi``` and ```Mandarin``` for ```China```. 
 
 ### Budget Analysis Across Time
+
 Next, we will compare the budget for recent movies and that of older movies. To this end, we define a new variable, ```movie_recent```. We will classify the movies as 
 
 * **New** : Released after 2000
@@ -810,9 +825,11 @@ Great! the movie ```Akira``` released in  1988, had an estimated budget of 1100 
 Similar analysis can be done to identify the highest income generating movies.
 
 ### Gross Income Analysis Across Time
+
 Similar to ```Budget```, we analyze the variation of ```Gross Income``` with time. We compute the statistical summaries, ```mean``` and ```median``` of the gross income as time progresses.
 
 <img src="movie_analysis_files/figure-html/Gross Income as Function of Time-1.png" style="display: block; margin: auto;" />
+
 It is easy to notice that mean income generated was almost same as median in earlier years. This can be attributed to small number of movies produced earlier as compared to number of movies produced nowadays. After the year 1965, the mean value exceeds the median income, hence we expect right skewness in the distribution of ```gross_income```. Moreover the mean income generated nowadays is much lower than earlier. This can hapen due to large number of movies produced nowadays and most of them don't do so good at the box office. Out of curiosity let's check how much income has been generated by the movie ```Akira``` the highest budget movie in year 1988. 
 
 
@@ -856,7 +873,8 @@ Therefore, we are going to look at the variation of movie count for above 10 gen
 <!--For all ```genre```, the movie count has increased significantly, but it is noisy. Moreover, number of movies for each ```genre``` is decreasing closer to 2020.-->
 
 ### Variation of Movie Count for Content Rating w.r.t Time
-Similar to ```genre```, does movies of ```content_rating``` also vary wih time.
+
+Similar to ```genre```, does movie count for different ```content_rating``` also vary wih time?
 
 <img src="movie_analysis_files/figure-html/unnamed-chunk-44-1.png" style="display: block; margin: auto;" />
 
@@ -865,6 +883,7 @@ The movie count for every content rating is behaving  noisily with respect to ti
 
 
 ### Variation in Movie Duration With Respect To Time
+
 Another attribute, which could change with time is the length of the movie. Since it varies with time, we will use line plot.
 
 <img src="movie_analysis_files/figure-html/Movie Duration vs. Time-1.png" style="display: block; margin: auto;" />
@@ -906,18 +925,23 @@ Next, we filter for the movies released in the year 1963 and identify the longes
 Therefore, ```Cleopatra``` is main contributor to the high average of movie duration in the year 1963.
 
 ### Aspect Ratio vs. Time
+
 Is ```aspect ratio``` a function of time? The relationship between height and width of the image might be changing with time.
 
 <img src="movie_analysis_files/figure-html/Aspect Ratio vs. Time-1.png" style="display: block; margin: auto;" />
+
 The mean ```aspect_ratio``` has an upward trend, as time progresses. The behavior is quite noisy.
 
 ### Distribution of Gross Income w.r.t Content Rating
+
 Next, we observe the effect of ```content_rating``` on ```gross_income```. Since ```content_rating``` is categorical, and ```gross_income``` is numeric, boxplot is suitable choice.
 
 <img src="movie_analysis_files/figure-html/Distribution of Gross Income w.r.t Content Rating-1.png" style="display: block; margin: auto;" />
+
 We see that the ```gross_income``` is highest for ```content_ratings```; ```R```,```PG```, and ```PG-13```. Moreover, these content ratings exhibit lots of variation for ```gross_income```. On the other hand, variation is least for content ratings, ```GP```,```M```,```G```. Moreover, distribution is right skewed for following content ratings, ```G```, ```PG```, ```PG-13```, and ```R```.  
 
 ### Distribution of Budget With Respect to Content Rating
+
 Similar to ```Gross Income```, we study the behavior of ```Budget``` as function o Content Rating. Boxplot is  a suitable choice.
 
 <img src="movie_analysis_files/figure-html/Variation of Budget with Content Rating-1.png" style="display: block; margin: auto;" />
@@ -948,13 +972,14 @@ Therefore ```Steamboy``` is the costliest ```PG-13``` movie with a budget of 212
 Despite being the costliest ```PG-13``` movie, ```Steamboy``` could not generate enough revenue, it earned merely 0.41 millions. Similar figures for ```Akira```. But ```Godzilla 2000``` did really good at the box office.
 
 ### Relation Between IMDB Score and Number of User Votes
+
 It is highly likely that the movie which has received lots of user votes has a  higher IMDB score. It wil be useful to get a scatterplot, since both are numeric in nature. Since, these two variables are on different scales, we normalize them and sketch the scatterplot.
 
 
 
 <img src="movie_analysis_files/figure-html/Get the scatterplot-1.png" style="display: block; margin: auto;" />
-Let's check the correlation coefficient. Since the relation seems nonlinear between these variables, we expect very low correlation coefficient. It seems that relationship is logarithmic in nature. Moreover, it is not obvious that higher IMDB score is guaranteed by high number of user votes. For smaller number of user votes, we observe lots of variation in the IMDB score.
 
+Let's check the correlation coefficient. Since the relation seems nonlinear between these variables, we expect very low correlation coefficient. It seems that relationship is logarithmic in nature. Moreover, it is not obvious that higher IMDB score is guaranteed by high number of user votes. For smaller number of user votes, we observe lots of variation in the IMDB score.
 
 ```
 ## [1] 0.4280672
@@ -1051,6 +1076,7 @@ Do movies of particular ```content_rating``` earn more profit? Boxplot will be u
 
 
 ### Content Rating and IMDB Score
+
 In this section, we explore the relation between ```content_rating``` and ```imdb_score```. Since ```content_rating``` is categorical, and ```imdb_score``` is numeric; boxplot will help to assess the variation.
 
 <img src="movie_analysis_files/figure-html/Variation of IMDB Score with Content Rating-1.png" style="display: block; margin: auto;" />
@@ -1059,12 +1085,9 @@ The mean IMDB score is comparable across all content ratings, with ```R``` movie
 
 As a side blurb, we analyze relation between imdb score and content rating in a different way. First, convert imdb score into categorical variable using the concept of ```breaks```, and define a new variable; ```score_category```. 
 
-
-
-
-
 <img src="movie_analysis_files/figure-html/unnamed-chunk-55-1.png" style="display: block; margin: auto;" />
- Therefore, movies with content raings ```G``` and ```NC-17``` have highest percentage of movies in the bracket (7,9.5]. Hence content rating should be considered as a factor in the model to predict IMDB rating.
+
+Therefore, movies with content raings ```G``` and ```NC-17``` have highest percentage of movies in the bracket (7,9.5]. Hence content rating should be considered as a factor in the model to predict IMDB rating.
  
 <!--###Profit vs. IMDB Score
 Movies that earned huge profit supposedly should have higher IMDB score. Since we have categorized IMDB score, we can use boxplot to compare profit for various levels of imdb score category. -->
@@ -1073,11 +1096,14 @@ Movies that earned huge profit supposedly should have higher IMDB score. Since w
 <!--We are unable to see much difference in imdb scores across different score categories. Few movies with IMDB score in the range $(7.95]$ earn lower profit than movies in the category $(1.5,5]$. -->
 
 ### Revenue Generated vs. IMDB Rating
+
 Another possible factor that might affect IMDB rating is revenue generated by the movie.
 <img src="movie_analysis_files/figure-html/Variation of IMDB Score with Gross Income-1.png" style="display: block; margin: auto;" />
+
 We observe a slight upward trend in the income generated, for higher IMDB score category.
 
 ### Movie Duration vs. IMDB Rating
+
 Does shorter or longer movies score higher on IMDB category? First, we look at the correlation coefficient.
 
 
@@ -1088,9 +1114,11 @@ Does shorter or longer movies score higher on IMDB category? First, we look at t
 As a side blurb, let us look at the box plot between score catgory and movie duration.
 
 <img src="movie_analysis_files/figure-html/unnamed-chunk-56-1.png" style="display: block; margin: auto;" />
+
 There is a slight upward trend in the median duration of the movies, i.e. for higher score category, the movies are bit longer.
 
 ### Variation of IMDB Score With Time
+
 Were older movies rated better as compared to contemporary movies? It is possible that due to some classics, IMDB scores were generally higher earlier.
 
 <img src="movie_analysis_files/figure-html/IMDB Score and Year of Release-1.png" style="display: block; margin: auto;" />
@@ -1098,6 +1126,7 @@ Were older movies rated better as compared to contemporary movies? It is possibl
 The boxplot is very cluttered. Since it is a function of time, line plot can be used to observe the mean/median IMDB score.
 
 <img src="movie_analysis_files/figure-html/unnamed-chunk-57-1.png" style="display: block; margin: auto;" />
+
 So, the answer is yes. The year of release does affect IMDB score. We see that the score is decreasing with time. Let us define a new  variable, movie_age,i.e. that is the difference between 2016(the most recent release year in the data) and year of release.
 
 
@@ -1107,6 +1136,7 @@ movie_select <- movie_select %>%
 ```
 
 ### Recap
+
 As a recap, we performed Bivariate Analyis on the movies datase. Here are the highlights:
 
 * Average IMDB score is relatively constant across different content ratings. For the movies rated, ```R```,```PG``` and ```PG-13```, there is significant variation in IMDB score.
@@ -1124,17 +1154,23 @@ As a recap, we performed Bivariate Analyis on the movies datase. Here are the hi
 * The revenue generated by a movie can be taken as a possible predictor while predicting the IMDB score. 
 
 ## Multivariate Analysis
+
 In this  section, we explore the movies data, considering more than two variables at a given time.
 
 ### Variation of Movie Count for Different Content Ratings across Countries 
+
 First, we analyze the variation in movie count for a given content rating with respect to time across different countries. We focus on the top 10 countries with the highest number of movies.
+
 <img src="movie_analysis_files/figure-html/Movie Count for Different Content Ratings Across Top 10 Countries-1.png" style="display: block; margin: auto;" />
+
 After the year 1990, there has been tremendous growth in number of movies, for all types of content ratings. As we saw earlier, U.S registers the highest number of movies produced, followed by U.K. Number of movies rated ```R``` is the highest throughout the post 1900 period. But the behavior is quite noisy. Next to ```R``` rated movies, we have ```PG-13``` movies, which is closely following the ```R``` rated movies. Number of ```PG``` rated movies is very small as compared to ```R``` and ```PG-13```, but the behavior is noisy.  
 
 ### Revenue Generated for Different Content Ratings Across Countries
+
 Next, we observe  the distribution of generated revenue for each content rating, across various countries. We focus on the top 10 countries where highest number of movies are produced. Here country and content ratings are categorical variables, whereas revenue is numerical, therefore boxplot is a suitable choice. 
 
 <img src="movie_analysis_files/figure-html/Distribution of Revenue w.r.t Content Ratings Across Countries-1.png" style="display: block; margin: auto;" />
+
 Across each country, outliers in gross income are observed mostly for three content ratings;  ```R```, ```PG```, and ```PG-13```. Since USA registers highest number of movies, most of the outliers are observed for it. We identify the highest income generating movie and its corresponding content rating for each country. 
 
 
@@ -1156,6 +1192,7 @@ Across each country, outliers in gross income are observed mostly for three cont
 ```
 
 ### Relation Between IMDB Rating and Revenue Generated for Different Content Ratings
+
 Is it true that there is interaction between revenue generated and content rating while predicting the IMDB score. To this end, we compute the correlation between revenue generated and imdb score for each content rating and generate scatterplot for imdb score vs. gross income for each value of content rating. Here, we use the concept of ```glue``` from ```stickylabeller``` package.
 
 
@@ -1165,6 +1202,7 @@ Is it true that there is interaction between revenue generated and content ratin
 We do not see any significant linear correlation here. In other words, we can rule out interaction between content rating and revenue generated while predicting the imdb score. To conclude, overall higher gross income across each content rating generates higher imdb score.
 
 ### Interaction of Country and Language for IMDB Score Prediction
+
 In this subsection, we try to answer the following question; is it true that for a given country movies in a particular language have higher IMDB score. We will focus our analysis on top 10 countries as well as top 10 movie languages as per movie counts. We obtain the movie percentage in a given IMDB category for a given language across countries. To this end, we facet by country, and look at stacked bar chart to compute the percentage of movies in an IMDB bucket, having language on x-axis.
 
 
@@ -1173,9 +1211,11 @@ In this subsection, we try to answer the following question; is it true that for
 It is obvious that there is some interaction between country and language. For instance, in Spain, Spanish movies have the highest proporion of movies with high IMDB score. Therefore, we propose to include interaction between country and language while predicting the IMDB score.
 
 #### Note
+
 As seen in univariate analysis, most of the movies are made in U.S. Therefore, we plan to exclude country as a predictor in the model. Similarly for language, most of the movies are produced in English; we exclude language as an independent feature. But, interaction between language and country seems to be suitable choice as a predictor in the model.
 
 ### Interaction of Language and Content Rating on IMDB Score
+
 Similar to country and language, we perform analysis on combined effects of language and content rating on IMDB Score. We limit the scope of our analysis to movies produced in top 10 countries as well as in top 10 languages.
 
 <img src="movie_analysis_files/figure-html/Interaction of Language and Content Rating-1.png" style="display: block; margin: auto;" />
@@ -1184,6 +1224,7 @@ We observe significant variation in IMDB score for different combinations of lan
 
 
 ## Correlation Matrix
+
 First we collect all numeric variables in our data frame and obtain the correlation matrix.
 
 
@@ -1292,6 +1333,7 @@ Looking at the correlation matrix, we observe that IMDB score is most strongly a
 ## Model Building
  
 ### Possible Predictors for IMDB Score
+
 We conducted rigorous analysis of the movies dataset, and identified few variables that may help to predict the IMDB score. These include;
 
 * Number of User votes,
@@ -1324,6 +1366,7 @@ movie_mean_impute <- movie_mean_impute %>%
 ```
 
 ### Function to Compute rmse
+
 To assess the model's performance, we define a function, called rmse.
 
 ```r
@@ -1334,6 +1377,7 @@ rmse<-function(error){
 
 
 ### Train Test Split
+
 We propose to hold out 25 percent of data for testing.
 
 
@@ -1345,7 +1389,8 @@ testing_mean  <- movie_mean_impute[-sample, ]
 ```
 
 ### Model 1
-In the first model, we try simple Linear REgression. We begin with including the variabes that were identified to be relevant predictors earlier.
+
+In the first model, we try simple Linear Regression. We begin with including the variabes that were identified to be relevant predictors earlier.
 
 
 ```r
@@ -1382,6 +1427,7 @@ summary(linmod1)
 ## F-statistic: 232.6 on 6 and 3588 DF,  p-value: < 2.2e-16
 ```
 #### Analysis of Model 1
+
 We compute the errors, first the training error, followed by testing set.
 
 
@@ -1398,11 +1444,13 @@ We compute the errors, first the training error, followed by testing set.
 The performance of model is not so impressive. Let's try to plot the predicted values vs. actual values for the test set.
 
 <img src="movie_analysis_files/figure-html/unnamed-chunk-72-1.png" style="display: block; margin: auto;" />
+
 We see non-linear relation between the scores, but overall it has an upward trend. But we see lots of variation in predicted scores. It is possible that this model is not taking into account some other features, whch are affecting IMDB score. As observed, we have only included numeric features in our model so far. It is worthwhile considering categorical features too while predicting IMDB score.
 But before we consider categorical features, it might be useful to consider our method of imputing. Presently, we are imputing numeric variables with mean of numeric variables. If the numeric variable has a right skewed distribution then imputing every missing value with mean seems not to be a wise choice. In our case, gross income is heavily right skewed. So it makes sense to impute numeric variables with its median.
 
 
 ### Model 2
+
 Next, we impute missing numeric variables with its median and redefine new variables and follow similar procedure except that we add a categorical variable, content rating.
 
 
@@ -1475,6 +1523,7 @@ summary(linmod2)
 ```
 
 #### Analysis of Model 2
+
 The $R^2$ for model 2 has improved slightly. Lets check the rmse on training as well as test set.
 
 
@@ -1490,6 +1539,7 @@ Next, we perform the same computation on test set.
 There is a slight improvement in $R^2$ but our model is still capturing only approx 30 percent of variation in the data. Maybe, we can think about training new models now. One of the options is using Support Vector Regressor(SVR).
 
 ### Model 3
+
 To implement SVR, we place an upper bound on the prediction error. The implementation is similar to SVM, with the only difference being, specify an upper bound on error, $\epsilon$. 
 
 
@@ -1530,6 +1580,7 @@ The training error is comparable to case of linear regression. Let us check the 
 Next, we use caret to implement SVR as well as do cross validation on the cost parameter, $C$. 
 
 ### Model 4
+
 First, we do the imputation using median of numeric variables, followed by normalizing it.
 
 
@@ -1586,6 +1637,7 @@ ggplot(performance,aes(cost,error))+
 ```
 
 <img src="movie_analysis_files/figure-html/unnamed-chunk-85-1.png" style="display: block; margin: auto;" />
+
 Once we obtain the best model, using ```best.model()```, we apply that model on the testing set, ```testing_median```.
 
 
