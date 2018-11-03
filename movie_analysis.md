@@ -9,7 +9,7 @@ output:
 
 In this exploratory analysis exercise, we study movies dataset. This dataset contains basic information for  a given movie such as title of the movie, year of production, name of the director, starcast, etc. In addition, we also have information regarding the popularity of the actors on facebook.
 
-##Description of Variables
+## Description of Variables
 
 * **movie_title** : the title of the movie
 * **title_year** : year of the release
@@ -196,7 +196,8 @@ To get an idea of duplicate rows, we should do a group by operation on the movie
 
 
 
-##Univariate Analysis
+## Univariate Analysis
+
 We begin with single variable analysis of the data. First, we look at the count of distinct movies, we are dealing with.
 
 
@@ -296,6 +297,7 @@ Most of the movies are rated ```R```, followed by ```PG-13```, and ```PG```. Alm
 This is an interesting feature in the dataset. It gives an idea of the popularity of movie languages. Being  a factor variable, its distribution will be studied using bar chart.
 
 <img src="movie_analysis_files/figure-html/Distribution of Movie Language-1.png" style="display: block; margin: auto;" />
+
 As expected, **English** is the dominating language, followed by **French** and **Hindi**. This information will be used later to study the language trend across countries, time, etc. Aside, we observe the 10 most popular  ```languages```.
 
 <img src="movie_analysis_files/figure-html/Top 10 Popular Languages-1.png" style="display: block; margin: auto;" />
